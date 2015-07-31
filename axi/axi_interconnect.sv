@@ -8,7 +8,7 @@ module axi_interconnect(
 	axi_interface.slave  axi_bus_s0,//h2f_briege
 	axi_interface.slave  axi_bus_s1);//JBush core
 
-	localparam M1_BASE_ADDRESS = 32'hfffee000;
+	localparam M1_BASE_ADDRESS = 32'h10000000;
 
 	typedef enum {
 		STATE_ARBITRATE,
@@ -39,7 +39,7 @@ module axi_interconnect(
 	.s1_awvalid(axi_bus_s1.awvalid),
 	.s1_arvalid(axi_bus_s1.arvalid),
 	.state(slave_select));
-	
+
 	always_ff @(posedge clk, posedge reset)
 	begin
 		if (reset)
@@ -83,6 +83,48 @@ module axi_interconnect(
 	
 	always_comb
 	begin
+		if(slave_select == 0)
+		begin
+			axi_bus_m0.awaddr = write_burst_address;
+			axi_bus_m0.awlen = write_burst_length;
+			axi_bus_m0.wdata = axi_bus_s0.wdata;
+			axi_bus_m0.wlast = axi_bus_s0.wlast;
+			axi_bus_m0.bready = axi_bus_s0.bready;
+			axi_bus_m0.wstrb = axi_bus_s0.wstrb;
+			axi_bus_m0.awburst = axi_bus_s0.awburst;
+			axi_bus_m0.awsize = axi_bus_s0.awsize;
+			axi_bus_m1.awaddr = write_burst_address - M1_BASE_ADDRESS;
+			axi_bus_m1.awlen = write_burst_length;
+			axi_bus_m1.wdata = axi_bus_s0.wdata;
+			axi_bus_m1.wlast = axi_bus_s0.wlast;
+			axi_bus_m1.bready = axi_bus_s0.bready;
+			axi_bus_m1.wstrb = axi_bus_s0.wstrb;
+			axi_bus_m1.awburst = axi_bus_s0.awburst;
+			axi_bus_m1.awsize = axi_bus_s0.awsize;
+		end
+		else
+		begin
+			axi_bus_m0.awaddr = write_burst_address;
+			axi_bus_m0.awlen = write_burst_length;
+			axi_bus_m0.wdata = axi_bus_s1.wdata;
+			axi_bus_m0.wlast = axi_bus_s1.wlast;
+			axi_bus_m0.bready = axi_bus_s1.bready;
+			axi_bus_m0.wstrb = axi_bus_s1.wstrb;
+			axi_bus_m0.awburst = axi_bus_s1.awburst;
+			axi_bus_m0.awsize = axi_bus_s1.awsize;
+			axi_bus_m1.awaddr = write_burst_address - M1_BASE_ADDRESS;
+			axi_bus_m1.awlen = write_burst_length;
+			axi_bus_m1.wdata = axi_bus_s1.wdata;
+			axi_bus_m1.wlast = axi_bus_s1.wlast;
+			axi_bus_m1.bready = axi_bus_s1.bready;
+			axi_bus_m1.wstrb = axi_bus_s1.wstrb;
+			axi_bus_m1.awburst = axi_bus_s1.awburst;
+			axi_bus_m1.awsize = axi_bus_s1.awsize;
+		end
+	end
+	
+	always_comb
+	begin
 		if (write_master_select == 0)
 		begin
 			// Master Interface 0 is selected
@@ -108,22 +150,6 @@ module axi_interconnect(
 			axi_bus_s1.bvalid = axi_bus_m1.bvalid && slave_select;
 		end
 	end
-	
-	/*
-	always_comb
-	begin
-		if(slave_select == 0)
-		begin
-			if(write_master_select)
-			begin
-				axi_bus_m0.awvalid = axi_bus_s0.awvalid && write_state_0 == STATE_ACTIVE_BURST;
-				//axi_bus_m1.awvalid = 0;
-				axi_bus_s0.awready = axi_bus_m0.awready && write_state_0 == STATE_ISSUE_ADDRESS;
-				axi_bus_s0.wready = axi_bus_m0.wready && write_state_0 == STATE_ACTIVE_BURST;
-				//axi_bus_s0.bvalid = axi_bus_m0.bvalid;
-			end
-		end
-	end*/
 	
 	
 

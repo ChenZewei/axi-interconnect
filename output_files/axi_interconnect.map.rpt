@@ -1,5 +1,5 @@
 Analysis & Synthesis report for axi_interconnect
-Fri Jul 31 16:50:16 2015
+Fri Jul 31 17:20:06 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -43,13 +43,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                           ;
 +-------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status         ; Successful - Fri Jul 31 16:50:16 2015            ;
+; Analysis & Synthesis Status         ; Successful - Fri Jul 31 17:20:06 2015            ;
 ; Quartus II 64-Bit Version           ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                       ; axi_interconnect                                 ;
 ; Top-level Entity Name               ; axi_interconnect                                 ;
 ; Family                              ; Cyclone V                                        ;
 ; Logic utilization (in ALMs)         ; N/A                                              ;
-; Total registers                     ; 12                                               ;
+; Total registers                     ; 44                                               ;
 ; Total pins                          ; 890                                              ;
 ; Total virtual pins                  ; 0                                                ;
 ; Total block memory bits             ; 0                                                ;
@@ -161,12 +161,11 @@ applicable agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ; < 0.1%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -181,29 +180,29 @@ applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                            ;
-+---------------------------------------------+--------------------------+
-; Resource                                    ; Usage                    ;
-+---------------------------------------------+--------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 17                       ;
-;                                             ;                          ;
-; Combinational ALUT usage for logic          ; 27                       ;
-;     -- 7 input functions                    ; 0                        ;
-;     -- 6 input functions                    ; 6                        ;
-;     -- 5 input functions                    ; 6                        ;
-;     -- 4 input functions                    ; 4                        ;
-;     -- <=3 input functions                  ; 11                       ;
-;                                             ;                          ;
-; Dedicated logic registers                   ; 12                       ;
-;                                             ;                          ;
-; I/O pins                                    ; 890                      ;
-; Total DSP Blocks                            ; 0                        ;
-; Maximum fan-out node                        ; axi_bus_s0.awvalid~input ;
-; Maximum fan-out                             ; 14                       ;
-; Total fan-out                               ; 1063                     ;
-; Average fan-out                             ; 0.58                     ;
-+---------------------------------------------+--------------------------+
++-----------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                 ;
++---------------------------------------------+-------------------------------+
+; Resource                                    ; Usage                         ;
++---------------------------------------------+-------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 45                            ;
+;                                             ;                               ;
+; Combinational ALUT usage for logic          ; 75                            ;
+;     -- 7 input functions                    ; 0                             ;
+;     -- 6 input functions                    ; 4                             ;
+;     -- 5 input functions                    ; 5                             ;
+;     -- 4 input functions                    ; 4                             ;
+;     -- <=3 input functions                  ; 62                            ;
+;                                             ;                               ;
+; Dedicated logic registers                   ; 44                            ;
+;                                             ;                               ;
+; I/O pins                                    ; 890                           ;
+; Total DSP Blocks                            ; 0                             ;
+; Maximum fan-out node                        ; axi_arbiter:arbiter|cur_state ;
+; Maximum fan-out                             ; 54                            ;
+; Total fan-out                               ; 1484                          ;
+; Average fan-out                             ; 0.78                          ;
++---------------------------------------------+-------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -211,7 +210,7 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                   ; Library Name ;
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------+--------------+
-; |axi_interconnect          ; 27 (26)           ; 12 (11)      ; 0                 ; 0          ; 890  ; 0            ; |axi_interconnect                     ; work         ;
+; |axi_interconnect          ; 75 (74)           ; 44 (43)      ; 0                 ; 0          ; 890  ; 0            ; |axi_interconnect                     ; work         ;
 ;    |axi_arbiter:arbiter|   ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |axi_interconnect|axi_arbiter:arbiter ; work         ;
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -234,12 +233,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 12    ;
+; Total registers                              ; 44    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 8     ;
-; Number of registers using Asynchronous Clear ; 11    ;
+; Number of registers using Asynchronous Clear ; 43    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 10    ;
+; Number of registers using Clock Enable       ; 43    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -249,7 +248,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
-; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |axi_interconnect|write_burst_length[7] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |axi_interconnect|write_burst_length[1] ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |axi_interconnect|write_state_0[10]     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
 
@@ -269,7 +268,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Jul 31 16:50:15 2015
+    Info: Processing started: Fri Jul 31 17:20:04 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off axi_interconnect -c axi_interconnect
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 2 entities, in source file axi/axi_interconnect.sv
@@ -280,24 +279,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file axi/axi
 Info (12021): Found 0 design units, including 0 entities, in source file axi/axi_interface.sv
 Info (12127): Elaborating entity "axi_interconnect" for the top level hierarchy
 Warning (10858): Verilog HDL warning at axi_interconnect.sv(26): object write_state_1 used but never assigned
-Warning (10036): Verilog HDL or VHDL warning at axi_interconnect.sv(27): object "write_burst_address" assigned a value but never read
 Warning (10030): Net "write_state_1" at axi_interconnect.sv(26) has no driver or initial value, using a default initial value '0'
 Warning (10034): Output port "axi_bus_m0.awid" at axi_interconnect.sv(6) has no driver
-Warning (10034): Output port "axi_bus_m0.awaddr" at axi_interconnect.sv(6) has no driver
-Warning (10034): Output port "axi_bus_m0.awlen" at axi_interconnect.sv(6) has no driver
-Warning (10034): Output port "axi_bus_m0.awsize" at axi_interconnect.sv(6) has no driver
-Warning (10034): Output port "axi_bus_m0.awburst" at axi_interconnect.sv(6) has no driver
 Warning (10034): Output port "axi_bus_m0.awcache" at axi_interconnect.sv(6) has no driver
 Warning (10034): Output port "axi_bus_m0.awlock" at axi_interconnect.sv(6) has no driver
 Warning (10034): Output port "axi_bus_m0.awprot" at axi_interconnect.sv(6) has no driver
 Warning (10034): Output port "axi_bus_m0.awqos" at axi_interconnect.sv(6) has no driver
 Warning (10034): Output port "axi_bus_m0.awvalid" at axi_interconnect.sv(6) has no driver
 Warning (10034): Output port "axi_bus_m0.awregion" at axi_interconnect.sv(6) has no driver
-Warning (10034): Output port "axi_bus_m0.wdata" at axi_interconnect.sv(6) has no driver
-Warning (10034): Output port "axi_bus_m0.wstrb" at axi_interconnect.sv(6) has no driver
-Warning (10034): Output port "axi_bus_m0.wlast" at axi_interconnect.sv(6) has no driver
 Warning (10034): Output port "axi_bus_m0.arid" at axi_interconnect.sv(6) has no driver
-Warning (10034): Output port "axi_bus_m0.bready" at axi_interconnect.sv(6) has no driver
 Warning (10034): Output port "axi_bus_m0.araddr" at axi_interconnect.sv(6) has no driver
 Warning (10034): Output port "axi_bus_m0.arlen" at axi_interconnect.sv(6) has no driver
 Warning (10034): Output port "axi_bus_m0.arsize" at axi_interconnect.sv(6) has no driver
@@ -310,21 +300,13 @@ Warning (10034): Output port "axi_bus_m0.arvalid" at axi_interconnect.sv(6) has 
 Warning (10034): Output port "axi_bus_m0.arregion" at axi_interconnect.sv(6) has no driver
 Warning (10034): Output port "axi_bus_m0.rready" at axi_interconnect.sv(6) has no driver
 Warning (10034): Output port "axi_bus_m1.awid" at axi_interconnect.sv(7) has no driver
-Warning (10034): Output port "axi_bus_m1.awaddr" at axi_interconnect.sv(7) has no driver
-Warning (10034): Output port "axi_bus_m1.awlen" at axi_interconnect.sv(7) has no driver
-Warning (10034): Output port "axi_bus_m1.awsize" at axi_interconnect.sv(7) has no driver
-Warning (10034): Output port "axi_bus_m1.awburst" at axi_interconnect.sv(7) has no driver
 Warning (10034): Output port "axi_bus_m1.awcache" at axi_interconnect.sv(7) has no driver
 Warning (10034): Output port "axi_bus_m1.awlock" at axi_interconnect.sv(7) has no driver
 Warning (10034): Output port "axi_bus_m1.awprot" at axi_interconnect.sv(7) has no driver
 Warning (10034): Output port "axi_bus_m1.awqos" at axi_interconnect.sv(7) has no driver
 Warning (10034): Output port "axi_bus_m1.awvalid" at axi_interconnect.sv(7) has no driver
 Warning (10034): Output port "axi_bus_m1.awregion" at axi_interconnect.sv(7) has no driver
-Warning (10034): Output port "axi_bus_m1.wdata" at axi_interconnect.sv(7) has no driver
-Warning (10034): Output port "axi_bus_m1.wstrb" at axi_interconnect.sv(7) has no driver
-Warning (10034): Output port "axi_bus_m1.wlast" at axi_interconnect.sv(7) has no driver
 Warning (10034): Output port "axi_bus_m1.arid" at axi_interconnect.sv(7) has no driver
-Warning (10034): Output port "axi_bus_m1.bready" at axi_interconnect.sv(7) has no driver
 Warning (10034): Output port "axi_bus_m1.araddr" at axi_interconnect.sv(7) has no driver
 Warning (10034): Output port "axi_bus_m1.arlen" at axi_interconnect.sv(7) has no driver
 Warning (10034): Output port "axi_bus_m1.arsize" at axi_interconnect.sv(7) has no driver
@@ -424,44 +406,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "axi_bus_m0.arid[1]" is stuck at GND
     Warning (13410): Pin "axi_bus_m0.arid[2]" is stuck at GND
     Warning (13410): Pin "axi_bus_m0.arid[3]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.bready" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wlast" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wstrb[0]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wstrb[1]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wstrb[2]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wstrb[3]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[0]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[1]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[2]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[3]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[4]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[5]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[6]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[7]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[8]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[9]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[10]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[11]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[12]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[13]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[14]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[15]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[16]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[17]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[18]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[19]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[20]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[21]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[22]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[23]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[24]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[25]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[26]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[27]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[28]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[29]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[30]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.wdata[31]" is stuck at GND
     Warning (13410): Pin "axi_bus_m0.awregion[0]" is stuck at GND
     Warning (13410): Pin "axi_bus_m0.awregion[1]" is stuck at GND
     Warning (13410): Pin "axi_bus_m0.awregion[2]" is stuck at GND
@@ -479,51 +423,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "axi_bus_m0.awcache[2]" is stuck at GND
     Warning (13410): Pin "axi_bus_m0.awcache[3]" is stuck at GND
     Warning (13410): Pin "axi_bus_m0.awlock" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awburst[0]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awburst[1]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awsize[0]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awsize[1]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awsize[2]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awlen[0]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awlen[1]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awlen[2]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awlen[3]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awlen[4]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awlen[5]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awlen[6]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awlen[7]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[0]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[1]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[2]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[3]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[4]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[5]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[6]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[7]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[8]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[9]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[10]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[11]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[12]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[13]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[14]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[15]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[16]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[17]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[18]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[19]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[20]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[21]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[22]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[23]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[24]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[25]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[26]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[27]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[28]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[29]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[30]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awaddr[31]" is stuck at GND
     Warning (13410): Pin "axi_bus_m0.awid[0]" is stuck at GND
     Warning (13410): Pin "axi_bus_m0.awid[1]" is stuck at GND
     Warning (13410): Pin "axi_bus_m0.awid[2]" is stuck at GND
@@ -595,44 +494,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "axi_bus_m1.arid[1]" is stuck at GND
     Warning (13410): Pin "axi_bus_m1.arid[2]" is stuck at GND
     Warning (13410): Pin "axi_bus_m1.arid[3]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.bready" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wlast" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wstrb[0]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wstrb[1]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wstrb[2]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wstrb[3]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[0]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[1]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[2]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[3]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[4]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[5]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[6]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[7]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[8]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[9]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[10]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[11]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[12]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[13]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[14]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[15]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[16]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[17]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[18]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[19]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[20]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[21]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[22]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[23]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[24]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[25]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[26]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[27]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[28]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[29]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[30]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.wdata[31]" is stuck at GND
     Warning (13410): Pin "axi_bus_m1.awregion[0]" is stuck at GND
     Warning (13410): Pin "axi_bus_m1.awregion[1]" is stuck at GND
     Warning (13410): Pin "axi_bus_m1.awregion[2]" is stuck at GND
@@ -650,51 +511,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "axi_bus_m1.awcache[2]" is stuck at GND
     Warning (13410): Pin "axi_bus_m1.awcache[3]" is stuck at GND
     Warning (13410): Pin "axi_bus_m1.awlock" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awburst[0]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awburst[1]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awsize[0]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awsize[1]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awsize[2]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awlen[0]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awlen[1]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awlen[2]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awlen[3]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awlen[4]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awlen[5]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awlen[6]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awlen[7]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[0]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[1]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[2]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[3]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[4]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[5]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[6]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[7]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[8]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[9]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[10]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[11]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[12]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[13]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[14]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[15]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[16]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[17]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[18]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[19]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[20]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[21]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[22]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[23]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[24]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[25]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[26]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[27]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[28]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[29]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[30]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awaddr[31]" is stuck at GND
     Warning (13410): Pin "axi_bus_m1.awid[0]" is stuck at GND
     Warning (13410): Pin "axi_bus_m1.awid[1]" is stuck at GND
     Warning (13410): Pin "axi_bus_m1.awid[2]" is stuck at GND
@@ -799,7 +615,7 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 406 input pin(s) that do not drive logic
+Warning (21074): Design contains 307 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "axi_bus_m0.arready"
     Warning (15610): No output dependent on input pin "axi_bus_m0.rvalid"
     Warning (15610): No output dependent on input pin "axi_bus_m0.rlast"
@@ -960,44 +776,6 @@ Warning (21074): Design contains 406 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "axi_bus_s0.arid[1]"
     Warning (15610): No output dependent on input pin "axi_bus_s0.arid[2]"
     Warning (15610): No output dependent on input pin "axi_bus_s0.arid[3]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.bready"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wlast"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wstrb[0]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wstrb[1]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wstrb[2]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wstrb[3]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[0]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[1]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[2]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[3]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[4]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[5]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[6]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[7]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[8]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[9]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[10]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[11]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[12]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[13]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[14]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[15]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[16]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[17]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[18]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[19]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[20]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[21]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[22]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[23]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[24]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[25]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[26]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[27]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[28]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[29]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[30]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.wdata[31]"
     Warning (15610): No output dependent on input pin "axi_bus_s0.awregion[0]"
     Warning (15610): No output dependent on input pin "axi_bus_s0.awregion[1]"
     Warning (15610): No output dependent on input pin "axi_bus_s0.awregion[2]"
@@ -1014,11 +792,6 @@ Warning (21074): Design contains 406 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "axi_bus_s0.awcache[2]"
     Warning (15610): No output dependent on input pin "axi_bus_s0.awcache[3]"
     Warning (15610): No output dependent on input pin "axi_bus_s0.awlock"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.awburst[0]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.awburst[1]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.awsize[0]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.awsize[1]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.awsize[2]"
     Warning (15610): No output dependent on input pin "axi_bus_s0.awid[0]"
     Warning (15610): No output dependent on input pin "axi_bus_s0.awid[1]"
     Warning (15610): No output dependent on input pin "axi_bus_s0.awid[2]"
@@ -1089,45 +862,7 @@ Warning (21074): Design contains 406 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "axi_bus_s1.arid[1]"
     Warning (15610): No output dependent on input pin "axi_bus_s1.arid[2]"
     Warning (15610): No output dependent on input pin "axi_bus_s1.arid[3]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.bready"
     Warning (15610): No output dependent on input pin "axi_bus_s1.wvalid"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wlast"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wstrb[0]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wstrb[1]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wstrb[2]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wstrb[3]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[0]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[1]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[2]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[3]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[4]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[5]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[6]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[7]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[8]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[9]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[10]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[11]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[12]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[13]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[14]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[15]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[16]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[17]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[18]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[19]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[20]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[21]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[22]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[23]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[24]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[25]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[26]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[27]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[28]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[29]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[30]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.wdata[31]"
     Warning (15610): No output dependent on input pin "axi_bus_s1.awregion[0]"
     Warning (15610): No output dependent on input pin "axi_bus_s1.awregion[1]"
     Warning (15610): No output dependent on input pin "axi_bus_s1.awregion[2]"
@@ -1144,11 +879,6 @@ Warning (21074): Design contains 406 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "axi_bus_s1.awcache[2]"
     Warning (15610): No output dependent on input pin "axi_bus_s1.awcache[3]"
     Warning (15610): No output dependent on input pin "axi_bus_s1.awlock"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.awburst[0]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.awburst[1]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.awsize[0]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.awsize[1]"
-    Warning (15610): No output dependent on input pin "axi_bus_s1.awsize[2]"
     Warning (15610): No output dependent on input pin "axi_bus_s1.awlen[0]"
     Warning (15610): No output dependent on input pin "axi_bus_s1.awlen[1]"
     Warning (15610): No output dependent on input pin "axi_bus_s1.awlen[2]"
@@ -1193,27 +923,14 @@ Warning (21074): Design contains 406 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "axi_bus_s1.awid[1]"
     Warning (15610): No output dependent on input pin "axi_bus_s1.awid[2]"
     Warning (15610): No output dependent on input pin "axi_bus_s1.awid[3]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.awaddr[12]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.awaddr[11]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.awaddr[10]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.awaddr[9]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.awaddr[8]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.awaddr[7]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.awaddr[6]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.awaddr[5]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.awaddr[4]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.awaddr[3]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.awaddr[2]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.awaddr[1]"
-    Warning (15610): No output dependent on input pin "axi_bus_s0.awaddr[0]"
-Info (21057): Implemented 917 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 997 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 446 input pins
     Info (21059): Implemented 444 output pins
-    Info (21061): Implemented 27 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 922 warnings
+    Info (21061): Implemented 107 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 640 warnings
     Info: Peak virtual memory: 515 megabytes
-    Info: Processing ended: Fri Jul 31 16:50:16 2015
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Fri Jul 31 17:20:06 2015
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 

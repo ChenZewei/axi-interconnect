@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Fri Jul 31 16:50:16 2015
+Analysis & Synthesis Status : Successful - Fri Jul 31 17:20:06 2015
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 Revision Name : axi_interconnect
 Top-level Entity Name : axi_interconnect
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 12
+Total registers : 44
 Total pins : 890
 Total virtual pins : 0
 Total block memory bits : 0
