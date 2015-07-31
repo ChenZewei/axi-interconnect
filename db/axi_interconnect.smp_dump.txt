@@ -1,0 +1,6 @@
+
+State Machine - |axi_interconnect|read_state
+Name read_state.STATE_ARBITRATE read_state.STATE_ACTIVE_BURST read_state.STATE_ISSUE_ADDRESS 
+read_state.STATE_ARBITRATE 0 0 0 
+read_state.STATE_ISSUE_ADDRESS 1 0 1 
+read_state.STATE_ACTIVE_BURST 1 1 0 

@@ -1,0 +1,22 @@
+set_global_assignment -entity "hps_with axi_interconnect" -library "hps_with axi_interconnect" -name IP_TOOL_NAME "Qsys"
+set_global_assignment -entity "hps_with axi_interconnect" -library "hps_with axi_interconnect" -name IP_TOOL_VERSION "13.0sp1"
+set_global_assignment -entity "hps_with axi_interconnect" -library "hps_with axi_interconnect" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -library "hps_with axi_interconnect" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../hps_with axi_interconnect.sopcinfo"]
+set_instance_assignment -entity "hps_with axi_interconnect" -library "hps_with axi_interconnect" -name SLD_INFO "QSYS_NAME hps_with axi_interconnect HAS_SOPCINFO 1 GENERATION_ID 1438354912"
+set_global_assignment -library "hps_with axi_interconnect" -name MISC_FILE [file join $::quartus(qip_path) "../../hps_with axi_interconnect.cmp"]
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "hps_with axi_interconnect" -name MISC_FILE [file join $::quartus(qip_path) "../../hps_with axi_interconnect.qsys"]
+
+set_global_assignment -library "hps_with axi_interconnect" -name VERILOG_FILE [file join $::quartus(qip_path) "hps_with axi_interconnect.v"]
+set_global_assignment -library "hps_with axi_interconnect" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.v"]
+set_global_assignment -library "hps_with axi_interconnect" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_synchronizer.v"]
+set_global_assignment -library "hps_with axi_interconnect" -name SDC_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.sdc"]
+set_global_assignment -library "hps_with axi_interconnect" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/axi_interconnect.sv"]
+set_global_assignment -library "hps_with axi_interconnect" -name MISC_FILE [file join $::quartus(qip_path) "submodules/axi_interface.sv"]
+set_global_assignment -library "hps_with axi_interconnect" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/axi_read_arbiter.sv"]
+set_global_assignment -library "hps_with axi_interconnect" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/axi_router.sv"]
+set_global_assignment -library "hps_with axi_interconnect" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/axi_write_arbiter.sv"]
+
+set_global_assignment -entity "altera_reset_controller" -library "hps_with axi_interconnect" -name IP_TOOL_NAME "altera_reset_controller"
+set_global_assignment -entity "altera_reset_controller" -library "hps_with axi_interconnect" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_reset_controller" -library "hps_with axi_interconnect" -name IP_TOOL_ENV "Qsys"

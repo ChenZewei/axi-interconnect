@@ -1,0 +1,59 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory="C:/Users/ThinkPad/Documents/Quartus II/axi-interconnect/" --output-directory="C:/Users/ThinkPad/Documents/Quartus II/axi-interconnect/hps_with axi_interconnect/" --report-file="bsf:C:/Users/ThinkPad/Documents/Quartus II/axi-interconnect/hps_with axi_interconnect.bsf" --system-info=DEVICE_FAMILY="Cyclone V" --system-info=DEVICE=5CSXFC6D6F31C8ES --system-info=DEVICE_SPEEDGRADE=8_H6 --component-file="C:/Users/ThinkPad/Documents/Quartus II/axi-interconnect/hps_with axi_interconnect.qsys"
+Progress: Loading axi-interconnect/hps_with axi_interconnect.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.0]
+Progress: Parameterizing module clk_0
+Progress: Adding hps_0 [altera_hps 13.0.1]
+Progress: Parameterizing module hps_0
+Progress: Adding axi_interconnect_0 [axi_interconnect 1.0]
+Progress: Parameterizing module axi_interconnect_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: hps_with axi_interconnect.hps_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
+Warning: hps_with axi_interconnect.hps_0: hps_0.h2f_mpu_events must be exported, or connected to a matching conduit.
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory="C:/Users/ThinkPad/Documents/Quartus II/axi-interconnect/" --output-directory="C:/Users/ThinkPad/Documents/Quartus II/axi-interconnect/hps_with axi_interconnect/synthesis/" --file-set=QUARTUS_SYNTH --report-file="sopcinfo:C:/Users/ThinkPad/Documents/Quartus II/axi-interconnect/hps_with axi_interconnect.sopcinfo" --report-file="html:C:/Users/ThinkPad/Documents/Quartus II/axi-interconnect/hps_with axi_interconnect.html" --report-file="qip:C:/Users/ThinkPad/Documents/Quartus II/axi-interconnect/hps_with axi_interconnect/synthesis/hps_with axi_interconnect.qip" --report-file="cmp:C:/Users/ThinkPad/Documents/Quartus II/axi-interconnect/hps_with axi_interconnect.cmp" --report-file=svd --system-info=DEVICE_FAMILY="Cyclone V" --system-info=DEVICE=5CSXFC6D6F31C8ES --system-info=DEVICE_SPEEDGRADE=8_H6 --component-file="C:/Users/ThinkPad/Documents/Quartus II/axi-interconnect/hps_with axi_interconnect.qsys" --language=VERILOG
+Progress: Loading axi-interconnect/hps_with axi_interconnect.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.0]
+Progress: Parameterizing module clk_0
+Progress: Adding hps_0 [altera_hps 13.0.1]
+Progress: Parameterizing module hps_0
+Progress: Adding axi_interconnect_0 [axi_interconnect 1.0]
+Progress: Parameterizing module axi_interconnect_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: hps_with axi_interconnect.hps_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
+Warning: hps_with axi_interconnect.hps_0: hps_0.h2f_mpu_events must be exported, or connected to a matching conduit.
+Info: hps_with axi_interconnect: Generating hps_with axi_interconnect "hps_with axi_interconnect" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 3 modules, 4 connections
+Info: No custom instruction connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: merlin_translator_transform: After transform: 3 modules, 4 connections
+Info: reset_adaptation_transform: After transform: 4 modules, 6 connections
+Info: merlin_mm_transform: After transform: 4 modules, 6 connections
+Info: hps_0: "Doing Pretransform for module: hps_0"
+Warning: hps_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
+Info: pipeline_bridge_swap_transform: After transform: 2 modules, 0 connections
+Info: No custom instruction connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: merlin_translator_transform: After transform: 2 modules, 0 connections
+Info: hps_0: "hps_with axi_interconnect" instantiated altera_hps "hps_0"
+Info: axi_interconnect_0: "hps_with axi_interconnect" instantiated axi_interconnect "axi_interconnect_0"
+Info: rst_controller: "hps_with axi_interconnect" instantiated altera_reset_controller "rst_controller"
+Error: fpga_interfaces: wrong # args: should be "synth outputName"
+    while executing
+"synth hps_with axi_interconnect_hps_0_fpga_interfaces"
+Info: fpga_interfaces: "hps_0" instantiated altera_interface_generator "fpga_interfaces"
+Error: Generation stopped, 1 or more modules remaining
+Info: hps_with axi_interconnect: Done hps_with axi_interconnect" with 6 modules, 10 files, 50617 bytes
+Error: ip-generate failed with exit code 1: 2 Errors, 3 Warnings
+Info: Finished: Create HDL design files for synthesis

@@ -1,5 +1,5 @@
 Flow report for axi_interconnect
-Fri Jul 31 17:20:06 2015
+Fri Jul 31 22:38:28 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------------+
 ; Flow Summary                                                                           ;
 +-------------------------------------+--------------------------------------------------+
-; Flow Status                         ; Successful - Fri Jul 31 17:20:06 2015            ;
+; Flow Status                         ; Successful - Fri Jul 31 22:38:27 2015            ;
 ; Quartus II 64-Bit Version           ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                       ; axi_interconnect                                 ;
 ; Top-level Entity Name               ; axi_interconnect                                 ;
@@ -48,7 +48,7 @@ applicable agreement for further details.
 ; Device                              ; 5CSXFC6D6F31C8ES                                 ;
 ; Timing Models                       ; Preliminary                                      ;
 ; Logic utilization (in ALMs)         ; N/A                                              ;
-; Total registers                     ; 44                                               ;
+; Total registers                     ; 91                                               ;
 ; Total pins                          ; 890                                              ;
 ; Total virtual pins                  ; 0                                                ;
 ; Total block memory bits             ; 0                                                ;
@@ -69,7 +69,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 07/31/2015 17:20:05 ;
+; Start date & time ; 07/31/2015 22:38:21 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; axi_interconnect    ;
 +-------------------+---------------------+
@@ -80,7 +80,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 1095409142899.143833440400888         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 13795399191685.143835350010748        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                     ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)       ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                  ; --            ; --          ; eda_simulation ;
@@ -100,8 +100,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:02     ; 1.0                     ; 515 MB              ; 00:00:01                           ;
-; Total                ; 00:00:02     ; --                      ; --                  ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 491 MB              ; 00:00:07                           ;
+; Total                ; 00:00:07     ; --                      ; --                  ; 00:00:07                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -110,7 +110,7 @@ applicable agreement for further details.
 +----------------------+------------------+-----------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +----------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis ; CZW              ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis ; Viago-PC         ; Windows 7 ; 6.2        ; x86_64         ;
 +----------------------+------------------+-----------+------------+----------------+
 
 

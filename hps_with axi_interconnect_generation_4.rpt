@@ -1,0 +1,39 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory="C:/Users/ThinkPad/Documents/Quartus II/axi-interconnect/" --output-directory="C:/Users/ThinkPad/Documents/Quartus II/axi-interconnect/hps_with axi_interconnect/" --report-file="bsf:C:/Users/ThinkPad/Documents/Quartus II/axi-interconnect/hps_with axi_interconnect.bsf" --system-info=DEVICE_FAMILY="Cyclone V" --system-info=DEVICE=5CSXFC6D6F31C8ES --system-info=DEVICE_SPEEDGRADE=8_H6 --component-file="C:/Users/ThinkPad/Documents/Quartus II/axi-interconnect/hps_with axi_interconnect.qsys"
+Progress: Loading axi-interconnect/hps_with axi_interconnect.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.0]
+Progress: Parameterizing module clk_0
+Progress: Adding axi_interconnect_0 [axi_interconnect 1.0]
+Progress: Parameterizing module axi_interconnect_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory="C:/Users/ThinkPad/Documents/Quartus II/axi-interconnect/" --output-directory="C:/Users/ThinkPad/Documents/Quartus II/axi-interconnect/hps_with axi_interconnect/synthesis/" --file-set=QUARTUS_SYNTH --report-file="sopcinfo:C:/Users/ThinkPad/Documents/Quartus II/axi-interconnect/hps_with axi_interconnect.sopcinfo" --report-file="html:C:/Users/ThinkPad/Documents/Quartus II/axi-interconnect/hps_with axi_interconnect.html" --report-file="qip:C:/Users/ThinkPad/Documents/Quartus II/axi-interconnect/hps_with axi_interconnect/synthesis/hps_with axi_interconnect.qip" --report-file="cmp:C:/Users/ThinkPad/Documents/Quartus II/axi-interconnect/hps_with axi_interconnect.cmp" --report-file=svd --system-info=DEVICE_FAMILY="Cyclone V" --system-info=DEVICE=5CSXFC6D6F31C8ES --system-info=DEVICE_SPEEDGRADE=8_H6 --component-file="C:/Users/ThinkPad/Documents/Quartus II/axi-interconnect/hps_with axi_interconnect.qsys" --language=VERILOG
+Progress: Loading axi-interconnect/hps_with axi_interconnect.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.0]
+Progress: Parameterizing module clk_0
+Progress: Adding axi_interconnect_0 [axi_interconnect 1.0]
+Progress: Parameterizing module axi_interconnect_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: hps_with axi_interconnect: Generating hps_with axi_interconnect "hps_with axi_interconnect" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 2 modules, 2 connections
+Info: No custom instruction connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: merlin_translator_transform: After transform: 2 modules, 2 connections
+Info: reset_adaptation_transform: After transform: 3 modules, 4 connections
+Info: merlin_mm_transform: After transform: 3 modules, 4 connections
+Info: axi_interconnect_0: "hps_with axi_interconnect" instantiated axi_interconnect "axi_interconnect_0"
+Info: rst_controller: "hps_with axi_interconnect" instantiated altera_reset_controller "rst_controller"
+Info: hps_with axi_interconnect: Done hps_with axi_interconnect" with 3 modules, 9 files, 28792 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable>
+  <columns>
+   <connections preferredWidth="47" />
+   <irq preferredWidth="34" />
+  </columns>
+ </systemtable>
+ <clocktable>
+  <columns>
+   <clockname preferredWidth="269" />
+   <clocksource preferredWidth="269" />
+   <frequency preferredWidth="250" />
+  </columns>
+ </clocktable>
+ <window width="1100" height="800" x="697" y="64" />
+ <library
+   expandedCategories="Library/Memories and Memory Controllers/External Memory Interfaces/DDR Interfaces,Library/Memories and Memory Controllers/External Memory Interfaces/Memory Models,Library/Memories and Memory Controllers/External Memory Interfaces/SDRAM Interfaces,Project,Library/Memories and Memory Controllers/External Memory Interfaces/LPDDR2 Interfaces,Library/Memories and Memory Controllers/External Memory Interfaces/DDR2 Interfaces,Library/Memories and Memory Controllers/External Memory Interfaces/DDR3 Interfaces,Library,Library/Memories and Memory Controllers/External Memory Interfaces,Project/Qsys Interconnect,Library/Memories and Memory Controllers,Project/System,Library/Embedded Processors,Project/Qsys Interconnect/AXI Interface" />
+ <hdlexample language="VERILOG" />
+</preferences>
