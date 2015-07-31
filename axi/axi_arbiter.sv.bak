@@ -1,0 +1,82 @@
+`include "axi_interface.sv"
+
+module axi_arbiter(
+	input clk,
+	input reset,
+	axi_interface.master axi_bus_m0,//sdram controller
+	axi_interface.master axi_bus_m1,//f2h_bridge 
+	axi_interface.slave  axi_bus_s0,//h2f_briege
+	axi_interface.slave  axi_bus_s1,//JBush core
+	output state,
+	output dir);
+	
+	typedef enum {
+		MASTER_0,
+		MASTER_1,
+		IDEL
+	} arbit_state;
+	
+	logic cur_state = 1'bz;
+	logic cur_dir;
+	always_ff @(posedge clk, posedge reset)
+	begin
+		if(reset)
+		begin
+			cur_state <= 1'bz;
+		end
+		else
+		begin
+			case(cur_state)
+				1'bz:
+				begin
+					if(axi_bus_s0.awvalid||axi_bus_s0.arvalid)
+					begin
+						cur_state <= 1'b0;
+						
+					end
+					else if(axi_bus_s1.awvalid||axi_bus_s1.arvalid)
+					begin
+						cur_state <= 1'b1;
+					end
+					else
+					begin
+						cur_state <= 1'bz;
+					end
+				end
+				1'b0:
+				begin
+					if(axi_bus_s1.awvalid||axi_bus_s1.arvalid)
+					begin
+						cur_state <= 1'b1;
+					end
+					else if(axi_bus_s0.awvalid||axi_bus_s0.arvalid)
+					begin
+						cur_state <= 1'b0;
+					end
+					else
+					begin
+						cur_state <= 1'bz;
+					end
+				end
+				1'b1:
+				begin
+					if(axi_bus_s0.awvalid||axi_bus_s0.arvalid)
+					begin
+						cur_state <= 1'b0;
+					end
+					else if(axi_bus_s1.awvalid||axi_bus_s1.arvalid)
+					begin
+						cur_state <= 1'b1;
+					end
+					else
+					begin
+						cur_state <= 1'bz;
+					end
+				end
+			endcase
+		end
+	end
+	
+	assign state = cur_state;
+	
+endmodule

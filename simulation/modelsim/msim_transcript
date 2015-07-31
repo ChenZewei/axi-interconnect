@@ -1,0 +1,72 @@
+# Reading D:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do axi_interconnect_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying D:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+C:/Users/Viago/Documents/Quartus\ II/axi/axi {C:/Users/Viago/Documents/Quartus II/axi/axi/axi_interface.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling interface axi_interface
+# 
+# Top level modules:
+# 	--none--
+# vlog -sv -work work +incdir+C:/Users/Viago/Documents/Quartus\ II/axi/axi {C:/Users/Viago/Documents/Quartus II/axi/axi/axi_arbiter.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling interface axi_interface
+# -- Compiling module axi_arbiter
+# 
+# Top level modules:
+# 	axi_arbiter
+# 
+vsim work.axi_arbiter
+# vsim work.axi_arbiter 
+# Loading sv_std.std
+# Loading work.axi_arbiter
+add wave -position insertpoint  \
+sim:/axi_arbiter/clk \
+sim:/axi_arbiter/cur_dir \
+sim:/axi_arbiter/cur_state \
+sim:/axi_arbiter/dir \
+sim:/axi_arbiter/reset \
+sim:/axi_arbiter/s0_arvalid \
+sim:/axi_arbiter/s0_awvalid \
+sim:/axi_arbiter/s1_arvalid \
+sim:/axi_arbiter/s1_awvalid \
+sim:/axi_arbiter/state
+force -freeze sim:/axi_arbiter/clk 1 0, 0 {5 ps} -r 10
+run
+run
+run
+run
+force -freeze sim:/axi_arbiter/s0_arvalid 1 0
+run
+run
+run
+force -freeze sim:/axi_arbiter/s1_arvalid 1 0
+run
+run
+force -freeze sim:/axi_arbiter/s0_arvalid 0 0
+run
+run
+run
+force -freeze sim:/axi_arbiter/s0_awvalid 1 0
+run
+run
+force -freeze sim:/axi_arbiter/s1_arvalid 0 0
+run
+run
+run
+run
+force -freeze sim:/axi_arbiter/s0_awvalid 0 0
+run
+run
+run
+run
+run
+run
