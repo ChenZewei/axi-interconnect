@@ -1,5 +1,5 @@
 Analysis & Synthesis report for axi_interconnect
-Fri Jul 31 22:38:28 2015
+Mon Aug 03 01:03:31 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -44,13 +44,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                           ;
 +-------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status         ; Successful - Fri Jul 31 22:38:27 2015            ;
+; Analysis & Synthesis Status         ; Successful - Mon Aug 03 01:03:31 2015            ;
 ; Quartus II 64-Bit Version           ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                       ; axi_interconnect                                 ;
 ; Top-level Entity Name               ; axi_interconnect                                 ;
 ; Family                              ; Cyclone V                                        ;
 ; Logic utilization (in ALMs)         ; N/A                                              ;
-; Total registers                     ; 91                                               ;
+; Total registers                     ; 89                                               ;
 ; Total pins                          ; 890                                              ;
 ; Total virtual pins                  ; 0                                                ;
 ; Total block memory bits             ; 0                                                ;
@@ -159,7 +159,7 @@ applicable agreement for further details.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -170,50 +170,48 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                     ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------+---------+
-; axi/axi_write_arbiter.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Users/ThinkPad/Documents/Quartus II/axi-interconnect/axi/axi_write_arbiter.sv ;         ;
-; axi/axi_interconnect.sv          ; yes             ; User SystemVerilog HDL File  ; C:/Users/ThinkPad/Documents/Quartus II/axi-interconnect/axi/axi_interconnect.sv  ;         ;
-; axi/axi_interface.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/ThinkPad/Documents/Quartus II/axi-interconnect/axi/axi_interface.sv     ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                        ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                    ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
+; axi/axi_interconnect.sv          ; yes             ; User SystemVerilog HDL File  ; C:/Users/Viago/Documents/Quartus II/axi/axi/axi_interconnect.sv ;         ;
+; axi/axi_interface.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/Viago/Documents/Quartus II/axi/axi/axi_interface.sv    ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                             ;
-+---------------------------------------------+-------------------------------------------+
-; Resource                                    ; Usage                                     ;
-+---------------------------------------------+-------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 122                                       ;
-;                                             ;                                           ;
-; Combinational ALUT usage for logic          ; 228                                       ;
-;     -- 7 input functions                    ; 1                                         ;
-;     -- 6 input functions                    ; 14                                        ;
-;     -- 5 input functions                    ; 10                                        ;
-;     -- 4 input functions                    ; 11                                        ;
-;     -- <=3 input functions                  ; 192                                       ;
-;                                             ;                                           ;
-; Dedicated logic registers                   ; 91                                        ;
-;                                             ;                                           ;
-; I/O pins                                    ; 890                                       ;
-; Total DSP Blocks                            ; 0                                         ;
-; Maximum fan-out node                        ; axi_write_arbiter:write_arbiter|cur_state ;
-; Maximum fan-out                             ; 100                                       ;
-; Total fan-out                               ; 2331                                      ;
-; Average fan-out                             ; 1.11                                      ;
-+---------------------------------------------+-------------------------------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 119       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 226       ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 12        ;
+;     -- 5 input functions                    ; 8         ;
+;     -- 4 input functions                    ; 15        ;
+;     -- <=3 input functions                  ; 191       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 89        ;
+;                                             ;           ;
+; I/O pins                                    ; 890       ;
+; Total DSP Blocks                            ; 0         ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 89        ;
+; Total fan-out                               ; 2312      ;
+; Average fan-out                             ; 1.10      ;
++---------------------------------------------+-----------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                               ;
-+--------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------+--------------+
-; Compilation Hierarchy Node           ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                               ; Library Name ;
-+--------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------+--------------+
-; |axi_interconnect                    ; 228 (227)         ; 91 (90)      ; 0                 ; 0          ; 890  ; 0            ; |axi_interconnect                                 ; work         ;
-;    |axi_write_arbiter:write_arbiter| ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |axi_interconnect|axi_write_arbiter:write_arbiter ; work         ;
-+--------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                       ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
+; |axi_interconnect          ; 226 (226)         ; 89 (89)      ; 0                 ; 0          ; 890  ; 0            ; |axi_interconnect   ; work         ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -229,18 +227,15 @@ Encoding Type:  One-Hot
 +--------------------------------+----------------------------+-------------------------------+--------------------------------+
 
 
-+---------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                    ;
-+----------------------------------------------+----------------------------------------+
-; Register name                                ; Reason for Removal                     ;
-+----------------------------------------------+----------------------------------------+
-; write_state_0[2..9,11..31]                   ; Merged with write_state_0[10]          ;
-; write_state_1[2..9,11..31]                   ; Merged with write_state_1[10]          ;
-; axi_write_arbiter:write_arbiter|cur_state~en ; Lost fanout                            ;
-; write_state_0[10]                            ; Stuck at GND due to stuck port data_in ;
-; write_state_1[10]                            ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 61       ;                                        ;
-+----------------------------------------------+----------------------------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; write_state[2..9,11..31]               ; Merged with write_state[10]            ;
+; write_state[10]                        ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 30 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -248,12 +243,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 91    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 89    ;
+; Number of registers using Synchronous Clear  ; 1     ;
 ; Number of registers using Synchronous Load   ; 18    ;
-; Number of registers using Asynchronous Clear ; 88    ;
+; Number of registers using Asynchronous Clear ; 89    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 85    ;
+; Number of registers using Clock Enable       ; 84    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -264,13 +259,12 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
 ; 3:1                ; 33 bits   ; 66 LEs        ; 33 LEs               ; 33 LEs                 ; Yes        ; |axi_interconnect|read_burst_address[23] ;
-; 4:1                ; 33 bits   ; 66 LEs        ; 33 LEs               ; 33 LEs                 ; Yes        ; |axi_interconnect|write_burst_address[4] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |axi_interconnect|read_burst_length[3]   ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |axi_interconnect|write_state_0[10]      ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |axi_interconnect|write_state_1[1]       ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |axi_interconnect|write_burst_length[4]  ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |axi_interconnect|arready                ;
+; 3:1                ; 33 bits   ; 66 LEs        ; 33 LEs               ; 33 LEs                 ; Yes        ; |axi_interconnect|write_burst_address[6] ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |axi_interconnect|read_burst_length[7]   ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |axi_interconnect|write_burst_length[7]  ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |axi_interconnect|write_state[0]         ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |axi_interconnect|rvalid                 ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |axi_interconnect|arready                ;
 ; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; No         ; |axi_interconnect|read_state             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
 
@@ -280,7 +274,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -290,9 +284,9 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Jul 31 22:38:19 2015
+    Info: Processing started: Mon Aug 03 01:03:29 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off axi_interconnect -c axi_interconnect
-Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 2 entities, in source file axi/axi_write_arbiter.sv
     Info (12023): Found entity 1: axi_interface
     Info (12023): Found entity 2: axi_write_arbiter
@@ -302,14 +296,13 @@ Info (12021): Found 1 design units, including 1 entities, in source file axi/axi
     Info (12023): Found entity 1: axi_interconnect
 Info (12021): Found 0 design units, including 0 entities, in source file axi/axi_interface.sv
 Info (12127): Elaborating entity "axi_interconnect" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at axi_interconnect.sv(228): truncated value with size 2 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at axi_interconnect.sv(237): truncated value with size 2 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at axi_interconnect.sv(233): truncated value with size 2 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at axi_interconnect.sv(242): truncated value with size 2 to match size of target (1)
 Warning (10034): Output port "axi_bus_m0.awid" at axi_interconnect.sv(6) has no driver
 Warning (10034): Output port "axi_bus_m0.awcache" at axi_interconnect.sv(6) has no driver
 Warning (10034): Output port "axi_bus_m0.awlock" at axi_interconnect.sv(6) has no driver
 Warning (10034): Output port "axi_bus_m0.awprot" at axi_interconnect.sv(6) has no driver
 Warning (10034): Output port "axi_bus_m0.awqos" at axi_interconnect.sv(6) has no driver
-Warning (10034): Output port "axi_bus_m0.awvalid" at axi_interconnect.sv(6) has no driver
 Warning (10034): Output port "axi_bus_m0.awregion" at axi_interconnect.sv(6) has no driver
 Warning (10034): Output port "axi_bus_m0.arid" at axi_interconnect.sv(6) has no driver
 Warning (10034): Output port "axi_bus_m0.arlen" at axi_interconnect.sv(6) has no driver
@@ -323,7 +316,6 @@ Warning (10034): Output port "axi_bus_m1.awcache" at axi_interconnect.sv(7) has 
 Warning (10034): Output port "axi_bus_m1.awlock" at axi_interconnect.sv(7) has no driver
 Warning (10034): Output port "axi_bus_m1.awprot" at axi_interconnect.sv(7) has no driver
 Warning (10034): Output port "axi_bus_m1.awqos" at axi_interconnect.sv(7) has no driver
-Warning (10034): Output port "axi_bus_m1.awvalid" at axi_interconnect.sv(7) has no driver
 Warning (10034): Output port "axi_bus_m1.awregion" at axi_interconnect.sv(7) has no driver
 Warning (10034): Output port "axi_bus_m1.arid" at axi_interconnect.sv(7) has no driver
 Warning (10034): Output port "axi_bus_m1.arlen" at axi_interconnect.sv(7) has no driver
@@ -344,10 +336,6 @@ Warning (10034): Output port "axi_bus_s1.bresp" at axi_interconnect.sv(9) has no
 Warning (10034): Output port "axi_bus_s1.rid" at axi_interconnect.sv(9) has no driver
 Warning (10034): Output port "axi_bus_s1.rresp" at axi_interconnect.sv(9) has no driver
 Warning (10034): Output port "axi_bus_s1.rlast" at axi_interconnect.sv(9) has no driver
-Info (12128): Elaborating entity "axi_write_arbiter" for hierarchy "axi_write_arbiter:write_arbiter"
-Warning (10059): Verilog HDL Case Statement warning at axi_write_arbiter.sv(21): case item expression never matches the case expression because it contains an 'x' or 'z' value
-Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13049): Converted tri-state buffer "axi_write_arbiter:write_arbiter|state" feeding internal logic into a wire
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "axi_bus_m0.arregion[0]" is stuck at GND
     Warning (13410): Pin "axi_bus_m0.arregion[1]" is stuck at GND
@@ -385,7 +373,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "axi_bus_m0.awqos[1]" is stuck at GND
     Warning (13410): Pin "axi_bus_m0.awqos[2]" is stuck at GND
     Warning (13410): Pin "axi_bus_m0.awqos[3]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m0.awvalid" is stuck at GND
     Warning (13410): Pin "axi_bus_m0.awprot[0]" is stuck at GND
     Warning (13410): Pin "axi_bus_m0.awprot[1]" is stuck at GND
     Warning (13410): Pin "axi_bus_m0.awprot[2]" is stuck at GND
@@ -439,7 +426,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "axi_bus_m1.awqos[1]" is stuck at GND
     Warning (13410): Pin "axi_bus_m1.awqos[2]" is stuck at GND
     Warning (13410): Pin "axi_bus_m1.awqos[3]" is stuck at GND
-    Warning (13410): Pin "axi_bus_m1.awvalid" is stuck at GND
     Warning (13410): Pin "axi_bus_m1.awprot[0]" is stuck at GND
     Warning (13410): Pin "axi_bus_m1.awprot[1]" is stuck at GND
     Warning (13410): Pin "axi_bus_m1.awprot[2]" is stuck at GND
@@ -479,10 +465,9 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "axi_bus_s1.bid[2]" is stuck at GND
     Warning (13410): Pin "axi_bus_s1.bid[3]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 106 input pin(s) that do not drive logic
+Warning (21074): Design contains 107 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "axi_bus_m0.rlast"
     Warning (15610): No output dependent on input pin "axi_bus_m0.rresp[0]"
     Warning (15610): No output dependent on input pin "axi_bus_m0.rresp[1]"
@@ -569,6 +554,7 @@ Warning (21074): Design contains 106 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "axi_bus_s1.arid[1]"
     Warning (15610): No output dependent on input pin "axi_bus_s1.arid[2]"
     Warning (15610): No output dependent on input pin "axi_bus_s1.arid[3]"
+    Warning (15610): No output dependent on input pin "axi_bus_s1.wvalid"
     Warning (15610): No output dependent on input pin "axi_bus_s1.awregion[0]"
     Warning (15610): No output dependent on input pin "axi_bus_s1.awregion[1]"
     Warning (15610): No output dependent on input pin "axi_bus_s1.awregion[2]"
@@ -589,14 +575,14 @@ Warning (21074): Design contains 106 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "axi_bus_s1.awid[1]"
     Warning (15610): No output dependent on input pin "axi_bus_s1.awid[2]"
     Warning (15610): No output dependent on input pin "axi_bus_s1.awid[3]"
-Info (21057): Implemented 1119 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1117 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 446 input pins
     Info (21059): Implemented 444 output pins
-    Info (21061): Implemented 229 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 282 warnings
-    Info: Peak virtual memory: 499 megabytes
-    Info: Processing ended: Fri Jul 31 22:38:28 2015
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:08
+    Info (21061): Implemented 227 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 276 warnings
+    Info: Peak virtual memory: 515 megabytes
+    Info: Processing ended: Mon Aug 03 01:03:31 2015
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

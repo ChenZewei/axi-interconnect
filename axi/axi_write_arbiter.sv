@@ -8,7 +8,29 @@ module axi_write_arbiter(
 	output state);
 	
 	logic cur_state = 1'bz;
+	logic awvalid_check;
+
+	assign awvalid_check = s0_awvalid || s1_awvalid;
 	
+	always_comb
+	begin
+		if(awvalid_check)
+		begin
+			if(cur_state == 1)
+			begin
+				cur_state = s1_awvalid?1'b1:1'b0;
+			end
+			else
+			begin
+				cur_state = s0_awvalid?1'b0:1'b1;
+			end
+		end
+		else
+		begin
+			cur_state = 1'bz;
+		end
+	end
+	/*
 	always_ff @(posedge clk, posedge reset)
 	begin
 		if(reset)
@@ -65,7 +87,7 @@ module axi_write_arbiter(
 				end
 			endcase
 		end
-	end
+	end*/
 	
 	assign state = cur_state;
 	
